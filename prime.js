@@ -3,11 +3,9 @@ function snapCracklePrime(maxValue){
 
     for(let i = 1; i <= maxValue; i++){
 
-            if(primos(i)){
-                array.push("Prime")
-            }
+            
 
-            else if(i % 5 == 0 && i % 2 == 1 && primos(i)){
+            if(i % 5 == 0 && i % 2 == 1 && primos(i)){
                 array.push("SnapCracklePrime")
             }else if(i % 5 == 0 && i % 2 == 1 ){
                 array.push("SnapCrackle")
@@ -17,8 +15,12 @@ function snapCracklePrime(maxValue){
                 array.push("Snap")
             } else if(i % 5 == 0){
                 array.push("Crackle")
+            }else if(primos(i)){
+                array.push("Prime")
             }else{
                 array.push(i)}
+
+                
         }
 
 
@@ -42,5 +44,3 @@ function primos(extra){
     }
 
 }
-
-//console.log(primos(1))
